@@ -8,4 +8,6 @@ class Item < ApplicationRecord
   has_many :users, through: :ownerships
   has_many :wants
   has_many :want_users, through: :wants, class_name: 'User', source: :user
+  has_many :holds
+  has_many :hold_users, through: :holds, class_name: 'User', source: :user
 end
